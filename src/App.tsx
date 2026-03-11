@@ -58,7 +58,11 @@ const Hero = () => (
           & Design.
         </h1>
         <p className="text-xl text-ink/60 max-w-md mb-8 leading-relaxed">
-          Hi, I'm <span className="text-ink font-semibold">Riel Jake Engaña</span>, a creative UI/UX designer crafting intuitive digital experiences that balance aesthetics and performance.
+          Hi, I'm <span className="text-ink font-semibold">Riel Jake Engaña</span>, A Software Development student at USJ-R with a 'living technology' mindset, having already completed 56 global projects
+before finishing Senior High School. My background spans freelance web development on Upwork and LinkedIn, graphic
+design, and technical maintenance for government platforms. These experiences have sharpened my professional
+problem-solving skills and my ability to deliver results for international clients. I am now eager to bring this proven
+technical passion and work ethic to a forward-thinking team.
         </p>
         
         <div className="relative inline-block">
