@@ -208,7 +208,7 @@ const AboutStats = () => (
           <div className="absolute inset-0 bg-accent-start blur-2xl opacity-20 group-hover:opacity-40 transition-opacity rounded-full" />
           <div className="relative w-48 h-48 rounded-full overflow-hidden border-4 border-white shadow-xl">
             <img 
-              src="https://picsum.photos/seed/about-me/400/400" 
+              src="https://scontent.fceb5-1.fna.fbcdn.net/v/t39.30808-6/552101041_1509294853530439_7428363637782670179_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=53a332&_nc_eui2=AeFm4v_fYjoSp8re9OP2Ao6W32IkdV409TffYiR1XjT1N-1EXEXdlxI7rSbOqcuvmaHBFOjFQOzBbG-JW0UeYMWa&_nc_ohc=xWbiTjd7-RAQ7kNvwH5l6Ku&_nc_oc=AdlyDfG4QsDAmHgwYCzbkMvvV5qUswbaj_WumS5GPuD79GnJCV2Av1TFSiQ__wUFO3w&_nc_zt=23&_nc_ht=scontent.fceb5-1.fna&_nc_gid=9VUs8qOphSLKUp_VqjYqfA&_nc_ss=8&oh=00_AfzfiMEmzL19cLHVK9bZ1TlftJJZls7dsIAIacNpI8XYqw&oe=69B75254" 
               alt="Designer Profile" 
               className="w-full h-full object-cover"
               referrerPolicy="no-referrer"
@@ -219,10 +219,10 @@ const AboutStats = () => (
 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
         {[
-          { label: "Years of Experience", value: "07" },
-          { label: "Projects Completed", value: "120+" },
-          { label: "Client Rating", value: "5.00" },
-          { label: "Design Awards", value: "03" }
+          { label: "Years of Experience", value: "05" },
+          { label: "Projects Completed", value: "50+" },
+          { label: "Client Rating", value: "4.50" },
+          { label: "Design Awards", value: "17" }
         ].map((stat, i) => (
           <div key={i} className="flex flex-col items-center">
             <span className="text-5xl md:text-7xl font-display font-bold mb-2">{stat.value}</span>
@@ -297,17 +297,17 @@ const Testimonials = () => (
       <div className="grid md:grid-cols-3 gap-12">
         {[
           { 
-            quote: "Extraordinary performance! Quick solutions. Highly recommended for any high-stakes design project.",
+            quote: "Experiensado jud bataa, kamao daghan nakat-unan Visual",
             name: "Wendilyn Peña",
             role: "CEO at Weanders Cake"
           },
           { 
-            quote: "Get quick solutions with great quality — a recommendation that's unequivocal. Jake is a true professional.",
+            quote: "Kani si Jake, isa ni sa akong consistent designer when it comes to Festivals",
             name: "Ervin Viva Demape",
             role: " festival Choreographer"
           },
           { 
-            quote: "Professional, creative, and truly results-driven! Transformed our user experience in record time.",
+            quote: "Affordable, Student budget ra iyang mga rates, so ako jud ni sya e recommend",
             name: "Jaytee Tariman",
             role: "Design Director at JT"
           }
