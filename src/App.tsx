@@ -302,17 +302,17 @@ const Testimonials = () => (
         {[
           { 
             quote: "Experiensado jud bataa, kamao daghan nakat-unan Visual",
-            name: "Wendilyn Peña",
-            role: "CEO at Weanders Cake"
+            name: "Carelyn Dimaranan Obeso",
+            role: "CEO at UNO Caffee"
           },
           { 
             quote: "Kani si Jake, isa ni sa akong consistent designer when it comes to Festivals",
-            name: "Ervin Viva Demape",
+            name: "Ewrin Mandela Jumawan",
             role: " festival Choreographer"
           },
           { 
             quote: "Affordable, Student budget ra iyang mga rates, so ako jud ni sya e recommend",
-            name: "Jaytee Tariman",
+            name: "Jayzen Cordove",
             role: "Design Director at JT"
           }
         ].map((t, i) => (
@@ -345,7 +345,7 @@ const LogoStrip = () => (
   <section className="py-20 px-6 bg-white border-y border-black/5">
     <div className="max-w-7xl mx-auto">
       <div className="flex flex-wrap justify-center md:justify-between items-center gap-12 opacity-40 grayscale hover:grayscale-0 transition-all">
-        {['FIGMA', 'CANVA', 'PHOTOSHOP', 'AFFFINITY', 'ILLUSTRATOR'].map((logo) => (
+        {['FIGMA', 'CANVA', 'PHOTOSHOP', 'AFFINITY', 'ILLUSTRATOR'].map((logo) => (
           <div key={logo} className="px-8 py-4 bg-bg rounded-2xl font-display font-black text-2xl tracking-tighter">
             {logo}
           </div>
