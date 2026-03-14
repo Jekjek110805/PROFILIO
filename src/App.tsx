@@ -307,7 +307,7 @@ const Testimonials = () => (
           },
           { 
             quote: "Kani si Jake, isa ni sa akong consistent designer when it comes to Festivals",
-            name: "Ewrin Mandela Jumawan",
+            name: "Erwin Mandela Jumawan",
             role: " festival Choreographer"
           },
           { 
