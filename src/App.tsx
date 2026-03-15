@@ -11,7 +11,8 @@ import {
   Mail,
   MapPin,
   Phone,
-  Facebook
+  Facebook,
+  Download
 } from 'lucide-react';
 
 // --- Components ---
@@ -31,10 +32,14 @@ const Navbar = () => (
         <a href="https://www.instagram.com/real_jexkz/?hl=en" className="hover:text-white transition-colors"><Instagram size={20} /></a>
         <a href="https://www.facebook.com/Engana08" className="hover:text-white transition-colors"><Facebook size={20} /></a>
       </div>
-      <button className="gradient-bg text-white px-6 py-2 rounded-full font-semibold text-sm hover:scale-105 transition-transform shadow-lg shadow-accent-start/20"
-      a href="/resume/Jake-Engana-Resume.pdf" download class="resume-btn"></a>
-        Download Resume.
-      </button><a/>
+  <a
+  href="RIEL JAKE_ENGANA _UPDATED RESUME_ Geidi.pdf"
+  download
+  className="flex items-center gap-2 gradient-bg text-white px-6 py-2 rounded-full font-semibold text-sm hover:scale-105 transition-transform shadow-lg shadow-accent-start/20"
+>
+  <Download size={16}/>
+  Resume
+</a>
     </div>
   </nav>
 );
@@ -359,10 +364,10 @@ const LogoStrip = () => (
 const FAQ = () => {
   const [expanded, setExpanded] = useState<number | null>(0);
   const faqs = [
-    { q: "What services do you offer?", a: "I offer a full range of design services including UI/UX design, branding, product strategy, and front-end development." },
-    { q: "How can I contact you?", a: "You can reach out via the contact form below or directly through my social media profiles." },
+    { q: "What services do you offer?", a: "I offer a full range of design services including UI/UX design, branding, product strategy, and system management, and web development." },
+    { q: "How can I contact you?", a: "You can reach out via the contact: Email: riel.engana@student.passerellesnumeriques.org. or call 09850254857" },
     { q: "How much does a project cost?", a: "Project costs vary based on scope and complexity. I provide custom quotes after an initial discovery call." },
-    { q: "Which tools do you provide?", a: "I primarily use Figma for design, and modern web technologies like React, Tailwind, and Framer Motion for development." }
+    { q: "Which tools do you provide?", a: "I primarily use Figma for design, and for development I use HTML, CSS, PHP, JAVA, REACT, NODEJS, TYPESCRIPT, and modern web technologies like LARAVEL, TAILWIND, and ANYTHING for development." }
   ];
 
   return (
@@ -457,6 +462,27 @@ const Contact = () => (
             <button className="w-full gradient-bg text-white py-5 rounded-2xl font-bold text-lg hover:scale-[1.02] transition-transform shadow-xl shadow-accent-start/20">
               Send Message
             </button>
+          </form>
+          <form>
+<div className="flex gap-4 mt-6">
+  
+  <a
+    href="#contact"
+    className="px-6 py-3 bg-white text-black rounded-xl font-semibold hover:scale-105 transition"
+  >
+    Hire Me
+  </a>
+
+  <a
+    href="/resume.pdf"
+    download
+    className="px-6 py-3 border border-white text-white rounded-xl font-semibold hover:bg-white hover:text-black transition"
+  >
+    Download Resume
+  </a>
+
+</div>
+
           </form>
         </div>
       </div>
