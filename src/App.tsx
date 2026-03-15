@@ -31,9 +31,10 @@ const Navbar = () => (
         <a href="https://www.instagram.com/real_jexkz/?hl=en" className="hover:text-white transition-colors"><Instagram size={20} /></a>
         <a href="https://www.facebook.com/Engana08" className="hover:text-white transition-colors"><Facebook size={20} /></a>
       </div>
-      <button className="gradient-bg text-white px-6 py-2 rounded-full font-semibold text-sm hover:scale-105 transition-transform shadow-lg shadow-accent-start/20">
-        For Review Purpose Only.
-      </button>
+      <button className="gradient-bg text-white px-6 py-2 rounded-full font-semibold text-sm hover:scale-105 transition-transform shadow-lg shadow-accent-start/20"
+      a href="/resume/Jake-Engana-Resume.pdf" download class="resume-btn"></a>
+        Download Resume.
+      </button><a/>
     </div>
   </nav>
 );
