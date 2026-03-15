@@ -39,7 +39,7 @@ const Navbar = () => (
   className="flex items-center gap-2 gradient-bg text-white px-6 py-2 rounded-full font-semibold text-sm hover:scale-105 transition-transform shadow-lg shadow-accent-start/20"
 >
   <Download size={16}/>
-  Resume
+  Download my Resume
 </a>
     </div>
   </nav>
