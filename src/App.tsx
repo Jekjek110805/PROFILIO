@@ -12,7 +12,8 @@ import {
   MapPin,
   Phone,
   Facebook,
-  Download
+  Download,
+  Heading1
 } from 'lucide-react';
 
 // --- Components ---
@@ -425,61 +426,68 @@ const Contact = () => (
         </div>
 
         <div>
-          <h2 className="text-5xl md:text-7xl font-display font-bold tracking-tighter mb-8">Let's Talk.</h2>
-          <form className="space-y-6">
-            <div className="grid grid-cols-2 gap-6">
-              <div className="space-y-2">
-                <label className="text-xs font-bold uppercase tracking-widest text-ink/40">Full Name</label>
-                <input type="text" placeholder="John Doe" className="w-full bg-bg border-none rounded-2xl px-6 py-4 focus:ring-2 focus:ring-accent-start transition-all outline-none" />
-              </div>
-              <div className="space-y-2">
-                <label className="text-xs font-bold uppercase tracking-widest text-ink/40">Email Address</label>
-                <input type="email" placeholder="john@example.com" className="w-full bg-bg border-none rounded-2xl px-6 py-4 focus:ring-2 focus:ring-accent-start transition-all outline-none" />
-              </div>
-            </div>
-            <div className="grid grid-cols-2 gap-6">
-              <div className="space-y-2">
-                <label className="text-xs font-bold uppercase tracking-widest text-ink/40">Project Type</label>
-                <select className="w-full bg-bg border-none rounded-2xl px-6 py-4 focus:ring-2 focus:ring-accent-start transition-all outline-none appearance-none">
-                  <option>UI/UX Design</option>
-                  <option>Branding</option>
-                  <option>Web Development</option>
-                </select>
-              </div>
-              <div className="space-y-2">
-                <label className="text-xs font-bold uppercase tracking-widest text-ink/40">Budget</label>
-                <select className="w-full bg-bg border-none rounded-2xl px-6 py-4 focus:ring-2 focus:ring-accent-start transition-all outline-none appearance-none">
-                  <option>$5k - $10k</option>
-                  <option>$10k - $25k</option>
-                  <option>$25k+</option>
-                </select>
-              </div>
-            </div>
-            <div className="space-y-2">
-              <label className="text-xs font-bold uppercase tracking-widest text-ink/40">Message</label>
-              <textarea placeholder="Tell me about your project..." rows={4} className="w-full bg-bg border-none rounded-2xl px-6 py-4 focus:ring-2 focus:ring-accent-start transition-all outline-none resize-none" />
-            </div>
-            <button className="w-full gradient-bg text-white py-5 rounded-2xl font-bold text-lg hover:scale-[1.02] transition-transform shadow-xl shadow-accent-start/20">
-              Send Message
-            </button>
-          </form>
+                <div className="text-2xl font-display font-bold tracking-tighter">SENT ME AN EMAIL NOW!</div>
+<br>
+</br>
+<form 
+  action="https://formsubmit.co/rieljake.engana.24@usjr.edu.ph" 
+  method="POST"
+  className="space-y-6"
+>
+
+  <input type="hidden" name="_subject" value="You have New Message from your client Jake!" />
+  <input type="hidden" name="_captcha" value="false" />
+
+  <div className="space-y-2">
+    <label className="text-xs font-bold uppercase tracking-widest text-ink/40">
+      Full Name
+    </label>
+    <input 
+      type="text" 
+      name="name"
+      required
+      placeholder="Name"
+      className="w-full bg-bg rounded-2xl px-6 py-4 outline-none focus:ring-2 focus:ring-accent-start"
+    />
+  </div>
+
+  <div className="space-y-2">
+    <label className="text-xs font-bold uppercase tracking-widest text-ink/40">
+      Email
+    </label>
+    <input 
+      type="email" 
+      name="email"
+      required
+      placeholder="yourname@email.com"
+      className="w-full bg-bg rounded-2xl px-6 py-4 outline-none focus:ring-2 focus:ring-accent-start"
+    />
+  </div>
+
+  <div className="space-y-2">
+    <label className="text-xs font-bold uppercase tracking-widest text-ink/40">
+      Message
+    </label>
+    <textarea 
+      name="message"
+      required
+      rows="4"
+      placeholder="Write your message..."
+      className="w-full bg-bg rounded-2xl px-6 py-4 outline-none focus:ring-2 focus:ring-accent-start resize-none"
+    />
+  </div>
+
+  <button
+    type="submit"
+    className="w-full gradient-bg text-white py-4 rounded-2xl font-bold hover:scale-[1.02] transition-transform"
+  >
+    Send Email
+  </button>
+
+</form>
           <form>
 <div className="flex gap-4 mt-6">
-  
-  <a
-    href="#contact"
-    className="px-6 py-3 bg-white text-black rounded-xl font-semibold hover:scale-105 transition"
-  >
-    Hire Me
-  </a>
 
-  <a
-    href="/resume.pdf"
-    download
-    className="px-6 py-3 border border-white text-white rounded-xl font-semibold hover:bg-white hover:text-black transition"
-  >
-    Download Resume
-  </a>
 
 </div>
 
