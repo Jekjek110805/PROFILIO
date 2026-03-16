@@ -34,7 +34,7 @@ const Navbar = () => (
         <a href="https://www.facebook.com/Engana08" className="hover:text-white transition-colors"><Facebook size={20} /></a>
       </div>
   <a
-  href="https://drive.google.com/drive/folders/1oDwaXPIHWQXlqdfYE17V_tM0j5Tr9Cyj?usp=sharing"
+  href="/RIEL JAKE_ENGANA _UPDATED RESUME.jpg"
   download
   className="flex items-center gap-2 gradient-bg text-white px-6 py-2 rounded-full font-semibold text-sm hover:scale-105 transition-transform shadow-lg shadow-accent-start/20"
 >
