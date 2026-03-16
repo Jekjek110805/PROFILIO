@@ -75,7 +75,7 @@ technical passion and work ethic to a forward-thinking team.
         <div className="relative inline-block">
           <span className="font-signature text-5xl text-accent-start -rotate-6 block absolute -top-8 -right-12 pointer-events-none opacity-80">
           </span>
-          <button className="bg-ink text-white px-8 py-4 rounded-full font-bold text-lg flex items-center gap-3 hover:bg-ink/90 transition-colors group">
+          <button className="bg-ink margin-top-20 text-white px-8 py-4 rounded-full font-bold text-lg flex items-center gap-3 hover:bg-ink/90 transition-colors group">
             View My Work
             <ArrowUpRight className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
           </button>
