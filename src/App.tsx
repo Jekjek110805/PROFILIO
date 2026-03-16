@@ -65,7 +65,7 @@ const Hero = () => (
           & Design.
         </h1>
         <p className="text-xl text-ink/60 max-w-md mb-8 leading-relaxed">
-          Hi, I'm <span className="text-ink font-semibold">Riel Jake Engaña</span>, A Software Development student at USJ-R with a 'living technology' mindset, having already completed 56 global projects
+          Hi, I'm <span className="text-ink font-semibold">Riel Jake Engaña</span>, A Software Development student at USJ-R with a 'living technology' mindset, having already completed 56 global and locals projects
 before finishing Senior High School. My background spans freelance web development on Upwork and LinkedIn, graphic
 design, and technical maintenance for government platforms. These experiences have sharpened my professional
 problem-solving skills and my ability to deliver results for international clients. I am now eager to bring this proven
@@ -365,7 +365,7 @@ const LogoStrip = () => (
 const FAQ = () => {
   const [expanded, setExpanded] = useState<number | null>(0);
   const faqs = [
-    { q: "What services do you offer?", a: "I offer a full range of design services including UI/UX design, branding, product strategy, graphic design, motion graphics, video editing, and system management, and web development and many more." },
+    { q: "What services do you offer?", a: "I offer a full range of design services including UI/UX design, branding, product strategy, graphic design, motion graphics, video editing, photo manipulation, system management, and web development and many more." },
     { q: "How can I contact you?", a: "You can reach out via the contact: Email: riel.engana@student.passerellesnumeriques.org. or call 09850254857" },
     { q: "How much does a project cost?", a: "Project costs vary based on scope and complexity. I provide custom quotes after an initial discovery call." },
     { q: "Which tools do you provide?", a: "I primarily use Figma for design, and for development I use HTML, CSS, PHP, JAVA, REACT, NODEJS, TYPESCRIPT, and modern web technologies like LARAVEL, TAILWIND, and ANYTHING for development, and in regards with databases, I use MongoDB, MySQL and Oracle." }
