@@ -506,7 +506,7 @@ const Footer = () => (
         <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
         <a href="#" className="hover:text-white transition-colors">Cookies</a>
       </div>
-      <p className="text-white/40 text-xs">© 2026 Aura Design. All rights reserved.</p>
+      <p className="text-white/40 text-xs">© 2026 ME_PROFILE. All rights reserved.</p>
     </div>
   </footer>
 );
