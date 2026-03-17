@@ -425,7 +425,7 @@ const Contact = () => (
           </div>
         </div>
         <div>
-                <div className="text-2xl font-display font-bold tracking-tighter">SENT ME AN EMAIL NOW!</div>
+                <div className="text-2xl font-display font-bold tracking-tighter">SEND ME AN EMAIL NOW!</div>
 <br>
 </br>
 <form 
