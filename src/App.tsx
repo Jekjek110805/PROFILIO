@@ -247,9 +247,9 @@ const AboutStats = () => (
 
 const Portfolio = () => {
   const projects = [
-    { title: "Mockup Design", category: "Mockup", img: "https://scontent.fceb5-1.fna.fbcdn.net/v/t39.30808-6/648212801_803002569509229_3183050080098602787_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=e06c5d&_nc_eui2=AeEbb6JTryoV_sSo_jmStDXsZkhyoRlJzk1mSHKhGUnOTak3rWaN2wxxhOZD3qXrRHKLZ46uLfVDnNiDVaFaruiX&_nc_ohc=L7L6C1pAtvMQ7kNvwEqEBwg&_nc_oc=Adl5zrpL6ehtsPtJEhbmN0nU_BdRiBlD81p2eHY5LtzM4vEoQXQ4UuqX9UnwxR8B5U4&_nc_zt=23&_nc_ht=scontent.fceb5-1.fna&_nc_gid=jiP7AldEXw_YDw1lTl2tlg&_nc_ss=8&oh=00_Afxhg0j5xje958mxgb16HSBhW927KXQMwhf8323fcGOdrg&oe=69B733D7" },
+    { title: "Mockup Design", category: "Mockup", img: "https://i.pinimg.com/1200x/c7/d1/01/c7d101d393ebdc64222459d97f98eb09.jpg" },
     { title: "Book Design", category: "Editorial", img: "https://i.pinimg.com/1200x/27/7b/fb/277bfbead0fb50f6e38498a302575060.jpg" },
-    { title: "Brand Identity", category: "Branding", img: "https://scontent.fceb5-1.fna.fbcdn.net/v/t39.30808-6/648967233_803001692842650_3995361425588863497_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=e06c5d&_nc_eui2=AeGXXtDUZh_noqBZMhoVj3gyQ4fY0kYb4GRDh9jSRhvgZLJVMd0HdHsrbTolN53aJkXdG28CJ9UDuFEdSbBrdHLt&_nc_ohc=2e6REckmPVkQ7kNvwGevVkm&_nc_oc=AdmulfOUUy0ErJMZl3kIMM_m9Be6_0eVTwHphHXPaUNTDVewZl47u4JGdapt-tRtvlI&_nc_zt=23&_nc_ht=scontent.fceb5-1.fna&_nc_gid=poXsmbIoP9D4YxVvhzhiHA&_nc_ss=8&oh=00_Afzl5ySNsTICsfe6rW5rUMcP0_fniN7I1FF-py5TAQT4OQ&oe=69B73697" },
+    { title: "Brand Identity", category: "Branding", img: "https://i.pinimg.com/736x/f0/82/f5/f082f507e9c0495eb2148193525d1f05.jpg" },
     { title: "Application UI", category: "Product", img: "https://i.pinimg.com/1200x/45/30/f2/4530f2da62402ab8c533ffacdab1c867.jpg" }
   ];
 
