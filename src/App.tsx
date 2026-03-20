@@ -219,7 +219,7 @@ const AboutStats = () => (
           <div className="absolute inset-0 bg-accent-start blur-2xl opacity-20 group-hover:opacity-40 transition-opacity rounded-full" />
           <div className="relative w-48 h-48 rounded-full overflow-hidden border-4 border-white shadow-xl">
             <img 
-              src="https://scontent.fceb5-1.fna.fbcdn.net/v/t39.30808-6/552101041_1509294853530439_7428363637782670179_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=53a332&_nc_eui2=AeFm4v_fYjoSp8re9OP2Ao6W32IkdV409TffYiR1XjT1N-1EXEXdlxI7rSbOqcuvmaHBFOjFQOzBbG-JW0UeYMWa&_nc_ohc=xWbiTjd7-RAQ7kNvwH5l6Ku&_nc_oc=AdlyDfG4QsDAmHgwYCzbkMvvV5qUswbaj_WumS5GPuD79GnJCV2Av1TFSiQ__wUFO3w&_nc_zt=23&_nc_ht=scontent.fceb5-1.fna&_nc_gid=9VUs8qOphSLKUp_VqjYqfA&_nc_ss=8&oh=00_AfzfiMEmzL19cLHVK9bZ1TlftJJZls7dsIAIacNpI8XYqw&oe=69B75254" 
+              src="https://instagram.fceb5-1.fna.fbcdn.net/v/t51.29350-15/452075668_1537009290576516_2906078154911533778_n.webp?stp=dst-jpg_e35_tt6&_nc_cat=110&ig_cache_key=MzQxODUzMDkzMTg0MjI2NDk1OQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjEwODB4MTA4MC5zZHIuZGVmYXVsdF9pbWFnZS5DMyJ9&_nc_ohc=EqqB2nk7u7cQ7kNvwGgpufX&_nc_oc=AdpNiNgvVOkNNAwpvNLIHrQA3tcrKEm6ftk-1fMYY4PepPDt9nwpv4QPuyF9tk9KPD4&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fceb5-1.fna&_nc_gid=TuaGwbkJ9xQUX0ngZ3RA0A&_nc_ss=7a30f&oh=00_AfxUSxLTIE0JFTnbW7EqKueBR9mxslerdZP1w412u7rAHQ&oe=69C2FFCD" 
               alt="Designer Profile" 
               className="w-full h-full object-cover"
               referrerPolicy="no-referrer"
