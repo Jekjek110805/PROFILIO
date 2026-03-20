@@ -417,7 +417,7 @@ const Contact = () => (
           <div className="absolute inset-0 bg-accent-start blur-3xl opacity-20 rounded-full" />
           <div className="relative aspect-square rounded-[3rem] overflow-hidden border-8 border-bg shadow-2xl">
             <img 
-              src="https://scontent.fceb5-1.fna.fbcdn.net/v/t39.30808-6/583906820_1556896388770285_1978226094479065252_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=53a332&_nc_eui2=AeGOtLBq4XFKjvSS9v77Tgz2CDBZ1MKVgJ4IMFnUwpWAnvLMwD5X8xy2sPZgfaJJ5coWRF_P47-MMKAzcf3so976&_nc_ohc=K81zsGr9rGUQ7kNvwG-cyG3&_nc_oc=AdlQ15u896VvuPTVGvt0A6bgwPAIReSNKM5AsXTfeGoXa8Rg-SF-c4AH8YsRfjFbXVk&_nc_zt=23&_nc_ht=scontent.fceb5-1.fna&_nc_gid=Lc69t0SpVB1xDZ-HONzb8g&_nc_ss=8&oh=00_Afw01VG-Ca1XEUHPUfTNXgNtYKGY2XXsr3goH5o_GF0mKA&oe=69B745D9" 
+              src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExOTZ5ZG8wMzBsYnQ5MHdwODl0MzdvYzVrdmVuNnZ1N253ejE4Y2U5MSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/qnC0HHjoN5kSJyq2Zc/giphy.gif" 
               alt="Contact" 
               className="w-full h-full object-cover"
               referrerPolicy="no-referrer"
