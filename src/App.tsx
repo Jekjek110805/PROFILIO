@@ -250,7 +250,7 @@ const Portfolio = () => {
     { title: "Mockup Design", category: "Mockup", img: "https://i.pinimg.com/1200x/c7/d1/01/c7d101d393ebdc64222459d97f98eb09.jpg" },
     { title: "Book Design", category: "Editorial", img: "https://i.pinimg.com/1200x/27/7b/fb/277bfbead0fb50f6e38498a302575060.jpg" },
     { title: "Brand Identity", category: "Branding", img: "https://i.pinimg.com/736x/f0/82/f5/f082f507e9c0495eb2148193525d1f05.jpg" },
-    { title: "Application UI", category: "Product", img: "https://i.pinimg.com/1200x/45/30/f2/4530f2da62402ab8c533ffacdab1c867.jpg" }
+    { title: "Application UI", category: "Product", img: "https://i.pinimg.com/1200x/55/c5/c3/55c5c3dcc92f6a476097c191e28d1434.jpg" }
   ];
 
   return (
