@@ -93,7 +93,7 @@ technical passion and work ethic to a forward-thinking team.
         
         <div className="relative w-full max-w-md aspect-square rounded-full overflow-hidden border-8 border-white shadow-2xl">
           <img 
-            src="https://instagram.fceb5-1.fna.fbcdn.net/v/t51.29350-15/452075668_1537009290576516_2906078154911533778_n.webp?stp=dst-jpg_e35_tt6&_nc_cat=110&ig_cache_key=MzQxODUzMDkzMTg0MjI2NDk1OQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjEwODB4MTA4MC5zZHIuZGVmYXVsdF9pbWFnZS5DMyJ9&_nc_ohc=EqqB2nk7u7cQ7kNvwGgpufX&_nc_oc=AdpNiNgvVOkNNAwpvNLIHrQA3tcrKEm6ftk-1fMYY4PepPDt9nwpv4QPuyF9tk9KPD4&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fceb5-1.fna&_nc_gid=TuaGwbkJ9xQUX0ngZ3RA0A&_nc_ss=7a30f&oh=00_AfxUSxLTIE0JFTnbW7EqKueBR9mxslerdZP1w412u7rAHQ&oe=69C2FFCD" 
+            src="https://scontent.fceb5-1.fna.fbcdn.net/v/t39.30808-6/583906820_1556896388770285_1978226094479065252_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=53a332&_nc_eui2=AeGOtLBq4XFKjvSS9v77Tgz2CDBZ1MKVgJ4IMFnUwpWAnvLMwD5X8xy2sPZgfaJJ5coWRF_P47-MMKAzcf3so976&_nc_ohc=qpbilkkIBh0Q7kNvwF8iRWO&_nc_oc=AdrX48WapaLnGTzO_X8kOqlsfRr7hJxQcSokrmeCd8Jsejp652ahBRlbDrt2Ydo12ZA&_nc_zt=23&_nc_ht=scontent.fceb5-1.fna&_nc_gid=XRphc6_7koOXyk9Jp4vUtA&_nc_ss=7a32e&oh=00_AfxYKpm1-a9ViANVJrFN6d0-PgpqAww5kI4osgmGTh9rKA&oe=69CC2599" 
             alt="Designer Portrait" 
             className="w-full h-full object-cover"
             referrerPolicy="no-referrer"
