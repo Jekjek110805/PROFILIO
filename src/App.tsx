@@ -309,12 +309,12 @@ const Testimonials = () => (
         {[
           { 
             quote: "Experiensado jud bataa, kamao daghan nakat-unan Visual",
-            name: "Carelyn Dimaranan Obeso",
+            name: "John Caried Dimaranan",
             role: "CEO at UNO Caffee"
           },
           { 
             quote: "Kani si Jake, isa ni sa akong consistent designer when it comes to Festivals",
-            name: "Erwin Mandela Jumawan",
+            name: "Marianie Mandela Jumawan",
             role: " festival Choreographer"
           },
           { 
