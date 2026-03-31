@@ -219,7 +219,7 @@ const AboutStats = () => (
           <div className="absolute inset-0 bg-accent-start blur-2xl opacity-20 group-hover:opacity-40 transition-opacity rounded-full" />
           <div className="relative w-48 h-48 rounded-full overflow-hidden border-4 border-white shadow-xl">
             <img 
-              src="https://scontent.fceb5-1.fna.fbcdn.net/v/t39.30808-6/508072534_1427485045044754_7390267875986308924_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=53a332&_nc_eui2=AeG2vu8fCm4wZibpypNmJUF_IsPpz1HYV_Aiw-nPUdhX8OkgvRgXKxU1YovS-oFzxkLUKCykk8ufhHdUtWpEJw73&_nc_ohc=Gb6s1dCSjk0Q7kNvwENuGxj&_nc_oc=AdoJrR5u4BLWu8k4nLQ4ecOFHt39rMAo1rUWZOWbD6wo7mV4muGJ_Xo72U17KdyRJJo&_nc_zt=23&_nc_ht=scontent.fceb5-1.fna&_nc_gid=Eu8KVLymwD9MkWt7Dz5m6A&_nc_ss=7a3a8&oh=00_AfxMw0knNELyAoVCsQvGJxkAoWyPXUK8pFu2B1jkUPXJkw&oe=69CC3961" 
+              src="https://scontent.ceb5-1.fna.fbcdn.net/v/t39.30808-6/508072534_1427485045044754_7390267875986308924_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=53a332&_nc_eui2=AeG2vu8fCm4wZibpypNmJUF_IsPpz1HYV_Aiw-nPUdhX8OkgvRgXKxU1YovS-oFzxkLUKCykk8ufhHdUtWpEJw73&_nc_ohc=Gb6s1dCSjk0Q7kNvwENuGxj&_nc_oc=AdoJrR5u4BLWu8k4nLQ4ecOFHt39rMAo1rUWZOWbD6wo7mV4muGJ_Xo72U17KdyRJJo&_nc_zt=23&_nc_ht=scontent.fceb5-1.fna&_nc_gid=Eu8KVLymwD9MkWt7Dz5m6A&_nc_ss=7a3a8&oh=00_AfxMw0knNELyAoVCsQvGJxkAoWyPXUK8pFu2B1jkUPXJkw&oe=69CC3961" 
               alt="Designer Profile" 
               className="w-full h-full object-cover"
               referrerPolicy="no-referrer"
