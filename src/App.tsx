@@ -93,7 +93,7 @@ technical passion and work ethic to a forward-thinking team.
         
         <div className="relative w-full max-w-md aspect-square rounded-full overflow-hidden border-8 border-white shadow-2xl">
           <img 
-            src="https://scontent.fceb5-1.fna.fbcdn.net/v/t39.30808-6/583906820_1556896388770285_1978226094479065252_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=53a332&_nc_eui2=AeGOtLBq4XFKjvSS9v77Tgz2CDBZ1MKVgJ4IMFnUwpWAnvLMwD5X8xy2sPZgfaJJ5coWRF_P47-MMKAzcf3so976&_nc_ohc=qpbilkkIBh0Q7kNvwF8iRWO&_nc_oc=AdrX48WapaLnGTzO_X8kOqlsfRr7hJxQcSokrmeCd8Jsejp652ahBRlbDrt2Ydo12ZA&_nc_zt=23&_nc_ht=scontent.fceb5-1.fna&_nc_gid=XRphc6_7koOXyk9Jp4vUtA&_nc_ss=7a32e&oh=00_AfxYKpm1-a9ViANVJrFN6d0-PgpqAww5kI4osgmGTh9rKA&oe=69CC2599" 
+            src="/profile.jpg" 
             alt="Designer Portrait" 
             className="w-full h-full object-cover"
             referrerPolicy="no-referrer"
@@ -219,7 +219,7 @@ const AboutStats = () => (
           <div className="absolute inset-0 bg-accent-start blur-2xl opacity-20 group-hover:opacity-40 transition-opacity rounded-full" />
           <div className="relative w-48 h-48 rounded-full overflow-hidden border-4 border-white shadow-xl">
             <img 
-              src="https://scontent.fceb5-1.fna.fbcdn.net/v/t39.30808-6/508072534_1427485045044754_7390267875986308924_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=53a332&_nc_eui2=AeG2vu8fCm4wZibpypNmJUF_IsPpz1HYV_Aiw-nPUdhX8OkgvRgXKxU1YovS-oFzxkLUKCykk8ufhHdUtWpEJw73&_nc_ohc=Gb6s1dCSjk0Q7kNvwENuGxj&_nc_oc=AdoJrR5u4BLWu8k4nLQ4ecOFHt39rMAo1rUWZOWbD6wo7mV4muGJ_Xo72U17KdyRJJo&_nc_zt=23&_nc_ht=scontent.fceb5-1.fna&_nc_gid=Eu8KVLymwD9MkWt7Dz5m6A&_nc_ss=7a3a8&oh=00_AfxMw0knNELyAoVCsQvGJxkAoWyPXUK8pFu2B1jkUPXJkw&oe=69CC3961" 
+              src="/permprofile.jpg" 
               alt="Designer Profile" 
               className="w-full h-full object-cover"
               referrerPolicy="no-referrer"
