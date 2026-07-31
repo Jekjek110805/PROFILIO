@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import Prism from './components/Prism/Prism';
+import Logo from './components/Logo/Logo';
+import Coverflow from './components/Coverflow/Coverflow';
+import Reviews from './components/Reviews/Reviews';
+import EyeTicker from './components/EyeTicker/EyeTicker';
 import { 
   Linkedin, 
   Instagram, 
@@ -54,11 +58,7 @@ const Navbar = () => {
   return (
     <nav className={`fixed top-0 left-0 w-full z-50 px-6 transition-all duration-500 flex justify-between items-center ${isScrolled ? 'py-4 bg-white/70 dark:bg-slate-950/70 backdrop-blur-xl shadow-sm border-b border-black/5 dark:border-white/5' : 'py-6 bg-transparent'}`}>
       <a href="#" className="flex items-center">
-        <img
-          src="/me-profile-logo.png"
-          alt="ME_Profile logo"
-          className="h-10 md:h-12 w-auto object-contain"
-        />
+        <Logo className="text-xl md:text-2xl text-ink dark:text-white transition-colors" />
       </a>
       <div className="hidden md:flex items-center gap-8 font-medium">
         <a href="#services" className="hover:text-accent-start transition-colors">Services</a>
@@ -85,6 +85,37 @@ const Navbar = () => {
     </nav>
   );
 };
+
+const heroSlides = [
+  {
+    title: "Behind the Lens",
+    image: {
+      src: "/474476352_1323057112154215_6879089384102707022_n.jpg",
+      alt: "Riel Jake Engaña crouching to shoot with a Fujifilm camera at an AMA Senior High event"
+    }
+  },
+  {
+    title: "Senior High",
+    image: {
+      src: "/474590781_1323907835402476_1613737370478227588_n.jpg",
+      alt: "Riel Jake Engaña in a blazer and AMA Senior High lanyard"
+    }
+  },
+  {
+    title: "Graduation",
+    image: {
+      src: "/475029024_1325299558596637_1364348765224487916_n - Copy.jpg",
+      alt: "Riel Jake Engaña in a red graduation toga holding his certificate"
+    }
+  },
+  {
+    title: "USJ-R 2024–2026",
+    image: {
+      src: "/475047621_1325302188596374_5734427133831803104_n.jpg",
+      alt: "Riel Jake Engaña — University of San Jose-Recoletos 2024–2026 portrait"
+    }
+  }
+];
 
 const Hero = () => (
   <section className="relative min-h-screen flex items-center pt-20 overflow-hidden px-6 md:px-20">
@@ -125,15 +156,18 @@ const Hero = () => (
         transition={{ duration: 1, ease: "easeOut" }}
         className="relative flex justify-center"
       >
-        {/* Glow Effect */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-radial from-accent-start/20 to-transparent blur-3xl rounded-full" />
-        
-        <div className="relative w-full max-w-md aspect-square rounded-full overflow-hidden border-4 md:border-8 border-white dark:border-slate-800 shadow-2xl transition-colors">
-          <img 
-            src="/699273422_1702802617512994_1962015335284207172_n.jpg" 
-            alt="Designer Portrait" 
-            className="w-full h-full object-cover"
-            referrerPolicy="no-referrer"
+        {/* 3D Coverflow Gallery */}
+        <div className="relative w-full h-[380px] md:h-[440px]">
+          <Coverflow
+            slides={heroSlides}
+            cardWidth={280}
+            cardHeight={280}
+            radius={4}
+            tilt={12}
+            sideTilt={6}
+            gap={6}
+            opacity={55}
+            showTitle={false}
           />
         </div>
 
@@ -162,14 +196,6 @@ const Hero = () => (
                 >
                   🔧 LLM Ops
                 </motion.div>
-
-                {/* Experience Badge */}
-                <div className="absolute -bottom-6 left-0 md:left-4 bg-white/80 dark:bg-slate-800/80 backdrop-blur-md p-4 md:p-6 rounded-2xl shadow-xl border border-black/5 dark:border-white/10 max-w-[160px] md:max-w-[200px]">
-                  <div className="text-2xl md:text-3xl font-display font-bold text-accent-start mb-1">OJT</div>
-                  <p className="text-[10px] md:text-xs font-semibold text-ink/60 dark:text-slate-400 uppercase tracking-wider leading-tight">
-                    Industrial Engineer Intern — AI Automation @ Geidi IT
-                  </p>
-                </div>
       </motion.div>
     </div>
   </section>
@@ -478,106 +504,6 @@ const Portfolio = () => {
   );
 };
 
-const Testimonials = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  // Simulated API response for testimonials
-  const allTestimonials = [
-    { 
-      quote: "Very experienced and knowledgeable. I learned a lot about visual design from him.",
-      name: "John Caried Dimaranan",
-      role: "CEO at UNO Caffee"
-    },
-    { 
-      quote: "Jake is one of my most consistent and reliable designers, especially when it comes to Festivals.",
-      name: "Marianie Mandela Jumawan",
-      role: "Festival Choreographer"
-    },
-    { 
-      quote: "Highly affordable with student-friendly rates. I absolutely recommend his services!",
-      name: "Jayzen Cordove",
-      role: "Design Director at JT"
-    },
-    {
-      quote: "Exceptional attention to detail. He delivered the web project well before our strict deadline.",
-      name: "Sarah Jenkins",
-      role: "Marketing Manager"
-    },
-    {
-      quote: "His UI/UX skills transformed our platform. User engagement has improved significantly.",
-      name: "Michael Chen",
-      role: "Product Owner"
-    },
-    {
-      quote: "A brilliant young developer with a professional work ethic. Fantastic results overall!",
-      name: "Elena Rodriguez",
-      role: "Startup Founder"
-    }
-  ];
-
-  // Automatically slide every 10 seconds
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % Math.ceil(allTestimonials.length / 3));
-    }, 10000);
-    return () => clearInterval(timer);
-  }, [allTestimonials.length]);
-
-  const visibleTestimonials = allTestimonials.slice(currentIndex * 3, (currentIndex + 1) * 3);
-
-  return (
-    <section className="py-32 px-6 overflow-hidden">
-      <div className="max-w-7xl mx-auto">
-        <AnimatePresence mode="wait">
-          <motion.div 
-            key={currentIndex}
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -50 }}
-            transition={{ duration: 0.6, ease: "easeInOut" }}
-            className="grid md:grid-cols-3 gap-12"
-          >
-            {visibleTestimonials.map((t, i) => (
-              <div key={i} className="flex flex-col h-full">
-                <div className="text-accent-start mb-6">
-                  {[...Array(5)].map((_, index) => (
-                    <span key={index} className="text-2xl">★</span>
-                  ))}
-                </div>
-                <p className="text-2xl font-display font-medium mb-8 flex-grow italic">
-                  "{t.quote}"
-                </p>
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full overflow-hidden bg-black/5 dark:bg-white/10">
-                    {/* Use the name to generate a consistent mock avatar */}
-                    <img src={`https://api.dicebear.com/7.x/avataaars/svg?seed=${t.name.replace(' ', '')}`} alt={t.name} referrerPolicy="no-referrer" />
-                  </div>
-                  <div>
-                    <h4 className="font-bold">{t.name}</h4>
-                    <p className="text-xs text-ink/40 dark:text-slate-500 uppercase tracking-widest">{t.role}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </motion.div>
-        </AnimatePresence>
-
-        {/* Slideshow Indicators */}
-        <div className="flex justify-center mt-16 gap-3">
-          {[...Array(Math.ceil(allTestimonials.length / 3))].map((_, i) => (
-            <button
-              key={i}
-              onClick={() => setCurrentIndex(i)}
-              className={`h-2 rounded-full transition-all duration-500 ${i === currentIndex ? 'w-8 bg-accent-start' : 'w-2 bg-black/20 dark:bg-white/20 hover:bg-black/40 dark:hover:bg-white/40'}`}
-              aria-label={`Go to slide ${i + 1}`}
-            />
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-};
-
 const SkillsTicker = () => {
   const skills = [
     { name: "HTML", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
@@ -595,7 +521,7 @@ const SkillsTicker = () => {
     { name: "FIGMA", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" },
     { name: "CANVA", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg" },
     { name: "PHOTOSHOP", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-original.svg" },
-    { name: "AFFINITY", icon: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cmVjdCB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHJ4PSI0IiBmaWxsPSIjMUI3MkI4Ii8+PHRleHQgeD0iNTAlIiB5PSI1OCUiIGRvbWluYW50LWJhc2VsaW5lPSJtaWRkbGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZmlsbD0id2hpdGUiIGZvbnQtd2VpZ2h0PSJib2xkIj5BJjwvdGV4dD48L3N2Zz4=" },
+    { name: "AFFINITY", icon: "/affinity-logotype.svg" },
     { name: "ILLUSTRATOR", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/illustrator/illustrator-original.svg" },
     { name: "HERMES AGENT", icon: "https://hermes-agent.nousresearch.com/img/desktop/badge.webp" },
     { name: "PYTHON", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
@@ -612,29 +538,44 @@ const SkillsTicker = () => {
     { name: "GITLAB", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg" },
     { name: "GIT", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
     { name: "UBUNTU LINUX", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ubuntu/ubuntu-original.svg" },
+    { name: "LINUX", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" },
     { name: "FASTAPI", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" },
     { name: "COMPOSIO", icon: "https://composio.dev/favicon.ico" },
     { name: "NOTEPAD++", icon: "https://cdn.simpleicons.org/notepadplusplus/90E59A" },
     { name: "SIXTH AI", icon: "https://trysixth.com/favicon.ico" }
   ];
 
+  // Two arced rows travelling in opposite directions; split the list in half.
+  const half = Math.ceil(skills.length / 2);
+  const toSlides = (list: typeof skills) =>
+    list.map(({ name, icon }) => ({ image: { src: icon, alt: `${name} logo` } }));
+
   return (
-    <section className="py-12 overflow-hidden flex whitespace-nowrap">
-      <motion.div 
-        className="flex items-center w-max"
-        animate={{ x: ["0%", "-50%"] }}
-        transition={{ duration: 80, ease: "linear", repeat: Infinity }}
-      >
-        {[...skills, ...skills].map((skill, index) => (
-          <div 
-            key={index} 
-            className="flex items-center gap-4 px-8 py-4 mx-4 font-display font-black text-2xl tracking-tighter opacity-60 grayscale hover:grayscale-0 hover:opacity-100 transition-all cursor-default"
-          >
-            <img src={skill.icon} alt={`${skill.name} logo`} className="w-8 h-8 object-contain" />
-            {skill.name}
-          </div>
-        ))}
-      </motion.div>
+    <section className="py-12">
+      <h2 className="text-center text-xs md:text-sm font-bold uppercase tracking-[0.25em] text-ink/40 dark:text-slate-500 mb-4">
+        Tools &amp; Technologies
+      </h2>
+      <div className="h-[400px] md:h-[500px]">
+        <EyeTicker
+          topImages={toSlides(skills.slice(0, half))}
+          bottomImages={toSlides(skills.slice(half))}
+          cardWidth={100}
+          cardHeight={150}
+          rowGap={120}
+          fit="contain"
+          rounded={3}
+          speed={12}
+          // Same surface as the review cards — see --card-surface in index.css.
+          cardStyle={{
+            background: 'var(--card-surface)',
+            backdropFilter: 'blur(12px)',
+            WebkitBackdropFilter: 'blur(12px)',
+            border: '1px solid var(--card-border)',
+            boxShadow: '0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)'
+          }}
+          cardPadding={14}
+        />
+      </div>
     </section>
   );
 };
@@ -793,17 +734,13 @@ const Contact = () => (
 const Footer = () => (
   <footer className="py-12 px-6 bg-ink dark:bg-black text-white transition-colors duration-500">
     <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
-      <img
-        src="/me-profile-logo.png"
-        alt="ME_Profile logo"
-        className="h-12 w-auto object-contain bg-white rounded-lg p-1.5"
-      />
+      <Logo className="text-2xl text-white" />
       <div className="flex gap-8 text-white/60 text-sm font-medium">
         <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
         <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
         <a href="#" className="hover:text-white transition-colors">Cookies</a>
       </div>
-      <p className="text-white/40 text-xs">© 2026 ME_PROFILE. All rights reserved.</p>
+      <p className="text-white/40 text-xs">© 2026 Ipseity. All rights reserved.</p>
     </div>
   </footer>
 );
@@ -859,7 +796,7 @@ export default function PortfolioPage() {
         <AboutStats />
         <JourneyTimeline />
         <Portfolio />
-        <Testimonials />
+        <Reviews />
         <SkillsTicker />
         <FAQ />
         <Contact />

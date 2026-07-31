@@ -20,6 +20,23 @@
   }
 }
 
+/*
+ * Shared card surface. The review cards apply this via Tailwind
+ * (bg-white/70 dark:bg-slate-900/60, border-black/5 dark:border-white/10);
+ * these vars expose the same values to components that style inline and so
+ * can't use the dark: variant — currently the tool tiles in EyeTicker.
+ * Built with color-mix on Tailwind's own tokens so the two can't drift.
+ */
+:root {
+  --card-surface: color-mix(in oklab, white 70%, transparent);
+  --card-border: color-mix(in oklab, black 5%, transparent);
+}
+
+:root.dark {
+  --card-surface: color-mix(in oklab, var(--color-slate-900) 60%, transparent);
+  --card-border: color-mix(in oklab, white 10%, transparent);
+}
+
 .gradient-text {
   @apply bg-linear-to-r from-accent-start to-accent-end bg-clip-text text-transparent;
 }
