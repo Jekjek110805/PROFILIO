@@ -6,7 +6,7 @@
 
 This contains everything you need to run your app locally.
 
-View your app in AI Studio: https://ai.studio/apps/b616e1a8-eb62-4110-9fe2-32404a27bb5e
+View your app in Vercel: https://profilio-e26e.vercel.app/
 
 ## Run Locally
 
