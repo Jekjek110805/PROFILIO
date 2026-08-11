@@ -132,7 +132,7 @@ const Hero = () => (
         className="relative z-10"
       >
         <h1 className="text-5xl md:text-8xl font-display font-bold leading-[0.9] tracking-tighter mb-6 mt-12 md:mt-0">
-          AI <Augmented></Augmented>,<br />
+          AI Augmented,<br />
           <span className="gradient-text"> Software</span><br />
           Developer.
         </h1>
