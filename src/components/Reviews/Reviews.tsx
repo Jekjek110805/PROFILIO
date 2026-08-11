@@ -60,7 +60,7 @@ const OrbitLogo = () => (
 );
 
 const EnnLabsLogo = () => (
-  <svg viewBox="0 0 170 48" className="h-7 w-auto self-start text-ink/80 dark:text-white/80" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+  <svg viewBox="0 0 170 48" className="h-7 w-auto self-start text-ink/80 dark:text-white/80" fill="none" aria-hidden="true" xmlns="https://www.byda.com.au/wp-content/uploads/2022/06/byda-favicon.svg">
     <rect width="48" height="48" rx="12" fill="#22262F"/>
     <g fill="#ffffffcc">
       <circle cx="12.375" cy="12.375" r="3.375"/><circle cx="24" cy="12.375" r="3.375"/><circle cx="35.625" cy="12.375" r="3.375"/>
@@ -214,8 +214,8 @@ const reviews = [
     avatarSrc: avatarUrl("benedict-doherty"),
     Logo: EnnLabsLogo,
     quote: "We asked for a chatbot and he talked us out of it. What we got instead was a multi-agent pipeline that plans and executes — genuinely a different category of tool.",
-    name: "Benedict Doherty",
-    role: "Founder, ennLabs"
+    name: "Graham Doherty",
+    role: "Client, BeforeYou Dig Australia"
   },
   {
     id: "cameron-yang",
