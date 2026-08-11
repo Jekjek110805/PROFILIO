@@ -448,7 +448,7 @@ const JourneyTimeline = () => {
 
 const Portfolio = () => {
   const projects = [
-    { title: "Paknaan VMS System", category: "Disaster System", img: "/VMS.png" },
+    { title: "Before you Dig Australia", category: "Mining Documentation Automation System", img: "/BYDA.png" },
     { title: "PNPh Tourna Website", category: "Tournament Website", img: "/TOUR.png" },
     { title: "MAAI WebApp Project", category: "SEO AI Agent", img: "/laptop.jpeg" },
     { title: "LostLink WebApp Project", category: "Lost and Found Management", img: "/Web App.png" }
