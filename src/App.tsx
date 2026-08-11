@@ -132,12 +132,14 @@ const Hero = () => (
         className="relative z-10"
       >
         <h1 className="text-5xl md:text-8xl font-display font-bold leading-[0.9] tracking-tighter mb-6 mt-12 md:mt-0">
-          AI Engineering,<br />
-          <span className="gradient-text"> Agentic</span><br />
-          Automation.
+          AI <Augmented></Augmented>,<br />
+          <span className="gradient-text"> Software</span><br />
+          Developer.
         </h1>
         <p className="text-xl text-ink/60 dark:text-slate-400 max-w-md mb-8 leading-relaxed">
-          Hi, I'm <span className="text-ink dark:text-white font-semibold">Riel Jake Engaña</span>, an Industrial Engineer Intern at Geidi IT specializing in AI Automation. I build autonomous AI agents and agentic workflows that reason, plan, and execute complex tasks — moving beyond chatbots into systems that actually get work done. My background blends industrial engineering rigor with hands-on AI development: designing multi-agent architectures, orchestrating LLM pipelines, and automating end-to-end business processes. Currently deploying production agentic systems at Geidi while finishing my Software Development degree at USJ-R.
+          Hi, I'm <span className="text-ink dark:text-white font-semibold">Riel Jake Engaña</span>, a Software-Augmented Software Developer Intern at Geidi IT, specializing in AI automation and intelligent software systems. My work focuses on developing AI-augmented applications, autonomous agents, and agentic workflows capable of reasoning, planning, and executing complex tasks.
+My background combines the analytical and process-oriented principles of Industrial Engineering with practical experience in software development and artificial intelligence. I work with multi-agent architectures, LLM orchestration, AI integration, and end-to-end process automation to develop efficient and scalable software solutions.
+Currently, I contribute to the development and deployment of production-ready AI-augmented and agentic systems at Geidi IT while completing my degree in Software Development at the University of San Jose–Recoletos (USJ-R).
         </p>
         
         <div className="relative inline-block">
@@ -342,7 +344,7 @@ const JourneyTimeline = () => {
     {
       year: "2026",
       title: "From student to work",
-      body: "Now I am growing as an Industrial Engineer Intern at Geidi IT, building AI automation, agentic workflows, and production-minded tools.",
+      body: "Now I am growing as an Software Developer Intern at Geidi IT, building AI automation, agentic workflows, and production-minded tools.",
       image: "/GEIDI.jpg"
     }
   ];
