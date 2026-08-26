@@ -19,6 +19,7 @@ import {
   MapPin,
   Phone,
   Facebook,
+  Github,
   Download,
   Heading1,
   Moon,
@@ -56,12 +57,19 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className={`fixed top-0 left-0 w-full z-50 px-6 transition-all duration-500 flex justify-between items-center ${isScrolled ? 'py-4 bg-white/70 dark:bg-slate-950/70 backdrop-blur-xl shadow-sm border-b border-black/5 dark:border-white/5' : 'py-6 bg-transparent'}`}>
+    <nav
+      className={`fixed z-50 px-6 transition-all duration-500 flex justify-between items-center ${
+        isScrolled
+          ? 'top-3 md:top-4 left-3 right-3 md:left-6 md:right-6 lg:left-12 lg:right-12 py-3 md:py-4 rounded-xl bg-white/70 dark:bg-slate-950/70 backdrop-blur-xl shadow-lg border border-black/5 dark:border-white/5'
+          : 'top-0 left-0 right-0 py-6 rounded-none bg-transparent'
+      }`}
+    >
       <a href="#" className="flex items-center">
         <Logo className="text-xl md:text-2xl text-ink dark:text-white transition-colors" />
       </a>
       <div className="hidden md:flex items-center gap-8 font-medium">
         <a href="#services" className="hover:text-accent-start transition-colors">Services</a>
+        <a href="#education" className="hover:text-accent-start transition-colors">Education</a>
         <a href="#portfolio" className="hover:text-accent-start transition-colors">Portfolio</a>
         <a href="#about" className="hover:text-accent-start transition-colors">About</a>
         <a href="#contact" className="hover:text-accent-start transition-colors">Contact</a>
@@ -71,6 +79,7 @@ const Navbar = () => {
           <a href="https://www.linkedin.com/in/riel-jake-engana-585644372/" className="hover:text-accent-start hover:scale-110 transition-all"><Linkedin size={20} /></a>
           <a href="https://www.instagram.com/real_jexkz/?hl=en" className="hover:text-accent-start hover:scale-110 transition-all"><Instagram size={20} /></a>
           <a href="https://www.facebook.com/Engana08" className="hover:text-accent-start hover:scale-110 transition-all"><Facebook size={20} /></a>
+          <a href="https://github.com/Jekx-geidi" target="_blank" rel="noopener noreferrer" className="hover:text-accent-start hover:scale-110 transition-all"><Github size={20} /></a>
         </div>
         <a
           href="/RIEL JAKE_ENGANA _VERCEL RESUME_ Geidi.jpg"
@@ -446,12 +455,109 @@ const JourneyTimeline = () => {
   );
 };
 
+const Education = () => {
+  const education = [
+    {
+      years: "2016 – 2021",
+      title: "Junior High School",
+      institution: "Junior High School Science Class",
+      body: "Completed junior high school under the Science curriculum, building the academic foundation before pursuing a technical and creative track in senior high.",
+      link: "https://www.youtube.com/channel/UCSZq2Jfqy8chv6jnsC1E0NA",
+      logo: "/PaknaanNHS-logo.png"
+    },
+    {
+      years: "2022 – 2024",
+      title: "Senior High School",
+      institution: "ACLC College of Mandaue",
+      body: "TVL strand, Major in Visual Graphic Design and Animation — where I first started applying design and technical skills to real projects.",
+      link: "https://www.facebook.com/ACLCCMandaueRegistrar/",
+      logo: "/ACLC-logo.png"
+    },
+    {
+      years: "2024 – Present",
+      title: "College",
+      institution: "University of San Jose–Recoletos",
+      body: "Associate in Computer Technology, Major in Software Development — currently completing my degree while working as a Software Developer Intern.",
+      link: "https://en.wikipedia.org/wiki/University_of_San_Jose%E2%80%93Recoletos",
+      logo: "/USJR-logo.png"
+    }
+  ];
+  const [activeIndex, setActiveIndex] = useState(education.length - 1);
+  const active = education[activeIndex];
+
+  return (
+    <section id="education" className="scroll-mt-24 py-32 px-6">
+      <div className="max-w-7xl mx-auto">
+        <FadeIn>
+          <div className="mb-16 md:mb-24">
+            <p className="text-sm font-bold uppercase tracking-widest text-accent-start mb-4">Background</p>
+            <h2 className="text-5xl md:text-7xl font-display font-bold tracking-tighter">
+              Education.
+            </h2>
+          </div>
+        </FadeIn>
+
+        <div className="relative">
+          <div className="hidden md:block absolute left-0 right-0 top-6 border-t-2 border-dashed border-black/25 dark:border-white/25" />
+
+          <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-6 mb-14">
+            {education.map((item, index) => (
+              <button
+                key={item.years}
+                type="button"
+                onClick={() => setActiveIndex(index)}
+                className={`group flex flex-col items-center text-center gap-3 transition-opacity ${index === activeIndex ? 'opacity-100' : 'opacity-45 hover:opacity-80'}`}
+                aria-label={`Show ${item.years} education milestone`}
+              >
+                <span className={`w-10 h-10 md:w-12 md:h-12 rounded-full overflow-hidden bg-white p-1.5 border-4 transition-colors ${index === activeIndex ? 'border-accent-start shadow-lg shadow-accent-start/30' : 'border-black/10 dark:border-white/20'}`}>
+                  <img src={item.logo} alt={`${item.institution} logo`} className="w-full h-full object-contain" referrerPolicy="no-referrer" />
+                </span>
+                <span className={`text-sm md:text-base font-bold uppercase tracking-widest transition-colors ${index === activeIndex ? 'text-ink dark:text-white' : 'text-ink/50 dark:text-white/50'}`}>
+                  {item.years}
+                </span>
+              </button>
+            ))}
+          </div>
+
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={active.years}
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -24 }}
+              transition={{ duration: 0.45, ease: [0.21, 0.47, 0.32, 0.98] }}
+              className="text-center max-w-2xl mx-auto"
+            >
+              <div className="w-20 h-20 md:w-24 md:h-24 mx-auto mb-6 rounded-full bg-white p-3 shadow-xl border border-black/5">
+                <img src={active.logo} alt={`${active.institution} logo`} className="w-full h-full object-contain" referrerPolicy="no-referrer" />
+              </div>
+              <p className="text-sm font-bold uppercase tracking-widest text-accent-start mb-3">{active.title}</p>
+              <h3 className="text-3xl md:text-5xl font-display font-bold tracking-tight mb-5">{active.institution}</h3>
+              <p className="text-lg text-ink/65 dark:text-slate-300 leading-relaxed mb-6">{active.body}</p>
+              <a
+                href={active.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 font-bold uppercase tracking-widest text-sm hover:text-accent-start transition-colors"
+              >
+                Visit <ArrowUpRight size={18} />
+              </a>
+            </motion.div>
+          </AnimatePresence>
+        </div>
+      </div>
+    </section>
+  );
+};
+
 const Portfolio = () => {
   const projects = [
     { title: "Before you Dig Australia", category: "Mining Documentation Automation System", img: "/BYDA.png" },
     { title: "PNPh Tourna Website", category: "Tournament Website", img: "/TOUR.png" },
-    { title: "MAAI WebApp Project", category: "SEO AI Agent", img: "/laptop.jpeg" },
-    { title: "LostLink WebApp Project", category: "Lost and Found Management", img: "/Web App.png" }
+    { title: "MAAI WebApp Project", category: "SEO AI Agent", img: "/maai.png" },
+    { title: "LostLink WebApp Project", category: "Lost and Found Management", img: "/Web App.png" },
+    { title: "Wendears Cake", category: "E-Commerce Website", img: "/Wendears.png" },
+    { title: "Tourmate", category: "AI Travel Companion App", img: "/Tourmate'.png" }
   ];
 
   return (
@@ -582,47 +688,75 @@ const SkillsTicker = () => {
   );
 };
 
-const FaqCard = ({ faq, index }: { faq: { q: string, a: string }, index: number }) => {
-  const [isOpen, setIsOpen] = useState(false);
+const faqGradients = [
+  'linear-gradient(160deg, #6366F1 0%, #8B5CF6 100%)',
+  'linear-gradient(160deg, #F97316 0%, #EF4444 100%)',
+  'linear-gradient(160deg, #10B981 0%, #06B6D4 100%)',
+  'linear-gradient(160deg, #EC4899 0%, #F43F5E 100%)'
+];
+
+// Fanned card carousel — center card active, side cards splay out and rotate,
+// styled after the "Daily Energy" Framer demo (decisive-reassurance-155626.framer.app).
+const FaqFanCard = ({
+  faq,
+  offset,
+  isActive,
+  onSelect,
+  gradient
+}: {
+  faq: { q: string; a: string };
+  offset: number;
+  isActive: boolean;
+  onSelect: () => void;
+  gradient: string;
+}) => {
+  const abs = Math.abs(offset);
+  const hidden = abs > 3;
 
   return (
-    <FadeIn delay={index * 0.1}>
-      <motion.div
-        className="group bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm rounded-3xl border border-black/5 dark:border-white/10 overflow-hidden transition-all duration-300 hover:border-black/10 dark:hover:border-white/20 hover:shadow-lg"
-        initial={false}
-        layout
-      >
-        <button
-          onClick={() => setIsOpen(!isOpen)}
-          className="w-full p-6 md:p-8 flex items-center justify-between gap-4 text-left"
-          aria-expanded={isOpen}
-        >
-          <h3 className="font-display font-bold text-2xl md:text-3xl pr-12">
-            {faq.q}
-          </h3>
-          <motion.div
-            animate={{ rotate: isOpen ? 45 : 0 }}
-            transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="flex-shrink-0 text-ink/40 dark:text-slate-500"
-          >
-            <Plus className="w-6 h-6" />
-          </motion.div>
-        </button>
-        
-        <motion.div
-          initial={{ height: 0, opacity: 0 }}
-          animate={{ height: isOpen ? "auto" : 0, opacity: isOpen ? 1 : 0 }}
-          transition={{ duration: 0.4, ease: [0.21, 0.47, 0.32, 0.98] }}
-          className="overflow-hidden"
-        >
-          <div className="px-6 pb-8 md:px-8 md:pb-10 border-t border-black/5 dark:border-white/10 bg-black/2 dark:bg-white/2">
-            <p className="text-lg leading-relaxed text-ink/70 dark:text-slate-300">
-              {faq.a}
-            </p>
-          </div>
-        </motion.div>
-      </motion.div>
-    </FadeIn>
+    <motion.button
+      type="button"
+      onClick={onSelect}
+      aria-current={isActive}
+      className="absolute top-0 left-1/2 w-[240px] h-[340px] md:w-[300px] md:h-[400px] rounded-[1.75rem] overflow-hidden text-left shadow-2xl focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
+      style={{ background: gradient, transformOrigin: 'bottom center' }}
+      initial={false}
+      animate={{
+        x: `calc(-50% + ${offset * 64}px)`,
+        y: abs * 16,
+        rotate: offset * 10,
+        scale: isActive ? 1 : Math.max(0.8, 1 - abs * 0.09),
+        opacity: hidden ? 0 : isActive ? 1 : 0.45,
+        filter: isActive ? 'blur(0px)' : 'blur(1.5px)',
+        zIndex: 100 - abs
+      }}
+      transition={{ type: 'spring', stiffness: 260, damping: 28 }}
+    >
+      <div className="relative h-full p-6 md:p-7 flex flex-col text-white">
+        <span className="self-end shrink-0 px-3 py-1 rounded-full bg-white/20 backdrop-blur-sm text-[10px] font-bold uppercase tracking-widest">
+          FAQ
+        </span>
+        <div className="mt-4 flex-1 min-h-0 flex flex-col">
+          <h3 className="font-display font-bold text-xl md:text-2xl leading-tight mb-3 line-clamp-2 shrink-0">{faq.q}</h3>
+          <AnimatePresence>
+            {isActive && (
+              <motion.div
+                initial={{ opacity: 0, y: 8 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.3, delay: 0.15 }}
+                className="flex-1 min-h-0 overflow-y-auto no-scrollbar pr-1"
+              >
+                <p className="text-sm md:text-base leading-relaxed text-white/90">{faq.a}</p>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </div>
+        {isActive && (
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-10 bg-gradient-to-t from-black/25 to-transparent rounded-b-[1.75rem]" />
+        )}
+      </div>
+    </motion.button>
   );
 };
 
@@ -633,17 +767,59 @@ const FAQ = () => {
     { q: "How much does a project cost?", a: "Project costs vary based on scope and complexity. I provide custom quotes after an initial discovery call." },
     { q: "Which tools do you provide?", a: "I primarily use Figma for design, and for development I use HTML, CSS, PHP, JAVA, REACT, NODEJS, TYPESCRIPT, and modern web technologies like LARAVEL, TAILWIND, and ANYTHING for development, and in regards with databases, I use MongoDB, MySQL and Oracle." }
   ];
+  const [activeIndex, setActiveIndex] = useState(Math.floor((faqs.length - 1) / 2));
+  const goToPrevious = () => setActiveIndex((activeIndex - 1 + faqs.length) % faqs.length);
+  const goToNext = () => setActiveIndex((activeIndex + 1) % faqs.length);
 
   return (
-    <section className="py-32 px-6">
+    <section className="py-32 px-6 overflow-hidden">
       <div className="max-w-6xl mx-auto">
         <FadeIn>
-          <h2 className="text-4xl md:text-6xl font-display font-bold text-center mb-20 tracking-tighter">Frequently Asked<br />Questions.</h2>
+          <h2 className="text-4xl md:text-6xl font-display font-bold text-center mb-4 tracking-tighter">Frequently Asked<br />Questions.</h2>
+          <p className="text-center text-ink/60 dark:text-slate-400 mb-16 md:mb-20">Tap a card to flip through the answers.</p>
         </FadeIn>
-        <div className="max-w-3xl mx-auto space-y-4">
-          {faqs.map((faq, i) => (
-            <FaqCard key={i} faq={faq} index={i} />
+
+        <div className="relative h-[400px] md:h-[460px] mb-12">
+          {faqs.map((faq, index) => (
+            <FaqFanCard
+              key={faq.q}
+              faq={faq}
+              offset={index - activeIndex}
+              isActive={index === activeIndex}
+              onSelect={() => setActiveIndex(index)}
+              gradient={faqGradients[index % faqGradients.length]}
+            />
           ))}
+        </div>
+
+        <div className="flex items-center justify-center gap-6">
+          <button
+            type="button"
+            onClick={goToPrevious}
+            className="w-10 h-10 md:w-12 md:h-12 rounded-full border border-black/20 dark:border-white/20 bg-white/50 dark:bg-slate-900/50 backdrop-blur-md flex items-center justify-center hover:border-accent-start hover:text-accent-start transition-colors"
+            aria-label="Previous question"
+          >
+            <ChevronLeft size={20} />
+          </button>
+          <div className="flex items-center gap-2">
+            {faqs.map((_, index) => (
+              <button
+                key={index}
+                type="button"
+                onClick={() => setActiveIndex(index)}
+                className={`w-2.5 h-2.5 rounded-full transition-colors ${index === activeIndex ? 'bg-accent-start' : 'bg-black/20 dark:bg-white/20'}`}
+                aria-label={`Show question ${index + 1}`}
+              />
+            ))}
+          </div>
+          <button
+            type="button"
+            onClick={goToNext}
+            className="w-10 h-10 md:w-12 md:h-12 rounded-full border border-black/20 dark:border-white/20 bg-white/50 dark:bg-slate-900/50 backdrop-blur-md flex items-center justify-center hover:border-accent-start hover:text-accent-start transition-colors"
+            aria-label="Next question"
+          >
+            <ChevronRight size={20} />
+          </button>
         </div>
       </div>
     </section>
@@ -797,6 +973,7 @@ export default function PortfolioPage() {
         <ServiceAccordion />
         <AboutStats />
         <JourneyTimeline />
+        <Education />
         <Portfolio />
         <Reviews />
         <SkillsTicker />
